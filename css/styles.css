@@ -8,6 +8,7 @@
    --tertiary-text-color: #ffffff;
 
    --accent-color:#2196f3;
+   --icon-color:#AFB1B8;
 
    --primary-font-family: Roboto, sans-serif;
    --secondary-font-family: Raleway, sans-serif;
@@ -92,6 +93,42 @@ padding-bottom: 94px;
     letter-spacing: 0.03em;
 }
 
+
+/* ---------------- Соцмережі ----------------*/
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.social-links .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    color: var(--icon-color);
+}
+
+.social-links .link:hover,
+.social-links .link:focus {
+    background-color: var(--accent-color);
+    color: var(--tertiary-text-color);
+}
+
+.link.bgc-color {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-links .icon {
+    fill: currentColor;
+}
+
+
+
 /* ---------------- Хедер ----------------*/
 .header{
     border-bottom: 1px solid #ececec;
@@ -172,7 +209,8 @@ margin-right: 50px;
 } */
 
 .contacts .link{
-    display: block;
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -188,12 +226,22 @@ margin-right: 50px;
     color: var(--accent-color);
 }
 
-/* ---------------- Герой ----------------*/
+.contacts-icon{
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+/* ---------------- Секція Герой ----------------*/
 
 .hero{
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: var(--tertiary-bgc-color);
+    
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero-bcg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: var(--tertiary-bgc-color); */
+
     text-align: center;
 }
 
@@ -253,6 +301,17 @@ margin-right: 50px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
+/* .advantages-list .item{
+text-align: center;
+} */
+
+.advantages-list .wrapper{
+    margin-bottom: 30px;
+    padding: 25px 100px;
+
+    background-color: var(--secondary-bgc-color);
+}
+
 
 .advantages-list .description {
     color: var(--secondary-text-color);
@@ -283,7 +342,7 @@ margin-right: 50px;
     display: flex;
     gap: 30px;
 }
-.team-list .item {
+.team-list > .item {
     background-color: var(--primary-bgc-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
@@ -308,6 +367,7 @@ margin-right: 50px;
 
 .team-list .description{
     text-align: center;
+    margin-bottom: 16px;
     
     color: var(--secondary-text-color);
 
@@ -316,6 +376,37 @@ margin-right: 50px;
     line-height: 1.19;
 
     letter-spacing: 0.03em;
+}
+
+
+/* ---------------- Секція Постійні клієнти ----------------*/
+.clients .section-title{
+    margin-bottom: 50px;
+}
+
+.clients-list{
+    display: flex;
+    gap: 30px;
+}
+
+.clients-list .link{
+    display: block;
+    padding: 16px 32px;
+
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+
+    color: var(--icon-color);
+}
+
+.clients-list .link:hover,
+.clients-list .link:focus {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.clients-list .icon {
+    fill: currentColor;
 }
 
 /* ---------------- Сторінка Портфоліо ---------------- */
@@ -364,16 +455,19 @@ margin-right: 50px;
     gap: 24px;
 }
 
-.work-examples-list .item{
-    border: 1px solid #eeeeee;
+.work-examples-list .link{
+    display: block;
+    color: inherit;
 }
 
-.work-examples-list .link{
-    color: inherit;
+.work-examples-list .link:hover,
+.work-examples-list .link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .work-examples-list .wrapper{
     padding: 20px 24px;
+    border: 1px solid #eeeeee;
 }
 
 .work-examples-list .title{
@@ -402,6 +496,15 @@ margin-right: 50px;
     padding-bottom: 60px;
 
     background-color: var(--tertiary-bgc-color);
+}
+
+.footer > .container{
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-address{
+    margin-right: 70px;
 }
 
 .logo-footer {
@@ -433,4 +536,21 @@ margin-bottom: 9px;
 .address-list .link:hover,
 .address-list .link:focus {
     color: var(--accent-color);
+}
+
+.footer-social-links .text{
+    display: block;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--tertiary-text-color);
+}
+
+.footer .social-links{
+    justify-content: flex-start;
 }
