@@ -34,7 +34,9 @@
             <li class="item">
               <a href="./portfolio.html" class="link">Портфоліо</a>
             </li>
-            <li class="item"><a href="#" class="link">Контакти</a></li>
+            <li class="item">
+              <a href="#footer-contacts" class="link">Контакти</a>
+            </li>
           </ul>
         </nav>
         <ul class="contacts">
@@ -66,7 +68,9 @@
             Ефективні рішення для <br />
             вашого бізнесу
           </h1>
-          <button type="button" class="modal-btn">Замовити послугу</button>
+          <button type="button" class="modal-btn" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!-- Переваги -->
@@ -129,29 +133,32 @@
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="activities-list">
-            <li>
+            <li class="item">
               <img
                 src="./images/img-action-1.jpg"
                 alt="верстка сайту"
                 width="370"
                 height="294"
               />
+              <p class="text">Десктопні додатки</p>
             </li>
-            <li>
+            <li class="item">
               <img
                 src="./images/img-action-2.jpg"
                 alt="адаптація сайту"
                 width="370"
                 height="294"
               />
+              <p class="text">Мобільні додатки</p>
             </li>
-            <li>
+            <li class="item">
               <img
                 src="./images/img-action-3.jpg"
                 alt="підбір дизайну для сайту"
                 width="370"
                 height="294"
               />
+              <p class="text">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -394,7 +401,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer id="footer-contacts" class="footer">
       <div class="container">
         <div class="footer-address">
           <a href="./index.html" lang="en" class="logo link">
@@ -463,5 +470,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="btn-close" data-modal-close>
+          <svg width="18" height="18" class="icon">
+            <use href="./images/sprite.svg#icon-close-pop-up"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
