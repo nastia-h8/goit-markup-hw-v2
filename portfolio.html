@@ -277,8 +277,7 @@
         </div>
       </section>
     </main>
-
-    <footer class="footer">
+    <footer id="footer-contacts" class="footer">
       <div class="container">
         <div class="footer-address">
           <a href="./index.html" lang="en" class="logo link">
@@ -345,6 +344,21 @@
             </li>
           </ul>
         </div>
+        <form
+          name="footer-form"
+          method="POST"
+          class="footer-form"
+          autocomplete="off"
+        >
+          <b class="form-text">Підпишіться на розсилку</b>
+          <input name="email" type="email" class="input" placeholder="E-mail" />
+          <button type="submit" class="modal-btn">
+            <span class="text">Підписатися</span>
+            <svg width="24" height="24" class="icon">
+              <use href="./images/sprite.svg#icon-icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
   </body>
