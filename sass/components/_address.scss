@@ -1,0 +1,30 @@
+.address-list__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address-list__link {
+    color: var(--tertiary-text-color);
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    transition: color var(--transition-duration) var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+
+    .address-list__item:nth-last-child(-n+2) & {
+        color: rgba(255, 255, 255, 0.6);
+        transition: color var(--transition-duration) var(--transition-timing-function);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+}
