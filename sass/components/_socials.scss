@@ -1,0 +1,30 @@
+.socials {
+@include flex-gap (10px);
+
+}
+
+.socials__link {
+    @extend %flex-center;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    color: var(--icon-color);
+    background-color: transparent;
+
+    transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
+
+    &:hover, &:focus{
+        background-color: var(--accent-color);
+        color: var(--tertiary-text-color);
+    }
+}
+
+
+.socials__link_other-bgc-color {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.socials__icon {
+    fill: currentColor;
+}
