@@ -5,6 +5,10 @@ body {
     background-color: var(--primary-bgc-color);
 }
 
+.body-fixed {
+    overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -34,3 +38,4 @@ img {
     max-width: 100%;
     height: auto;
 }
+

@@ -1,7 +1,25 @@
 .advantages {
-    @include flex-gap (30px);
-    // justify-content: space-between;
+    @media screen and (min-width:768px){
+        @include flex-gap(30px);
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
 }
+.advantages__item{
+    &:not(:last-child) {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+        }
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 1 * 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 3 * 30px) / 4);
+    }
+}
+
 
 .advantages__title {
     margin-bottom: 10px;
@@ -15,8 +33,9 @@
 }
 
 .advantages__wrapper {
+    @extend %flex-center;
     margin-bottom: 30px;
-    padding: 25px 100px;
+    height: 120px;
 
     background-color: var(--secondary-bgc-color);
 }

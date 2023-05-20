@@ -1,0 +1,38 @@
+.header {
+    position: relative;
+    border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width:1200px){
+        justify-content: flex-start;
+    }
+}
+
+
+.header__logo{
+    display: inline-block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        }
+
+    @media screen and (min-width: 1200px){
+        padding-top: 24px;
+        padding-bottom: 24px;
+        margin-right: 93px;
+    }
+
+}
+
+.header__logo_dark{
+    color: #000000;
+}
+

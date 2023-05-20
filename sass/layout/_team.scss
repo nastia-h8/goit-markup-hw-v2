@@ -1,5 +1,9 @@
 .team {
-@include flex-gap (30px);
+    @media screen and (min-width:768px){
+        @include flex-gap (30px);
+        flex-wrap: wrap;
+    }
+
 }
 
 .team__item {
@@ -7,6 +11,20 @@
     border-radius: 0px 0px 4px 4px;
 
     background-color: var(--primary-bgc-color);
+
+    &:not(:last-child){
+        @media screen and (max-width:767px) {
+        margin-bottom: 30px;   
+            }
+
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 1 * 30px) / 2);
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 3 * 30px) / 4);
+        }
+    }
 }
 
 .team__wrapper {
