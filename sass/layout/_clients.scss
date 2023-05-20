@@ -1,10 +1,26 @@
 .clients {
     @include flex-gap (30px);
+    flex-wrap: wrap;
 }
 
 .clients__item {
-    width: 170px;
     height: 92px;
+
+    @media screen and (max-width: 479px) {
+        flex-basis: 170px;
+    }
+
+    @media screen and (min-width: 480px) {
+        flex-basis: calc((100% - 1 * 30px) / 2);
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 2 * 30px) / 3);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 5 * 30px) / 6);
+    }
 }
 
 

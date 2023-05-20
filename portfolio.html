@@ -26,7 +26,88 @@
         <a href="./index.html" lang="en" class="logo header__logo"
           >Web<span class="header__logo_dark">Studio</span>
         </a>
+        <button type="button" class="mobile-menu__button" data-menu-open>
+          <svg width="40" height="40" class="mobile-menu__icon">
+            <use
+              class="mobile-menu__icon_open"
+              href="./images/sprite.svg#icon-burger-mobile-menu"
+            ></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" data-menu>
+          <div class="mobile-menu__container">
+            <button type="button" class="mobile-menu__button" data-menu-close>
+              <svg
+                width="40"
+                height="40"
+                class="mobile-menu__icon mobile-menu__icon_close"
+              >
+                <use href="./images/sprite.svg#icon-close-mobile-menu"></use>
+              </svg>
+            </button>
 
+            <nav class="mobile-menu-nav">
+              <ul class="mobile-menu-nav__list">
+                <li class="mobile-menu-nav__item">
+                  <a href="./index.html" class="mobile-menu-nav__link"
+                    >Студія</a
+                  >
+                </li>
+                <li class="mobile-menu-nav__item">
+                  <a
+                    href="./portfolio.html"
+                    class="mobile-menu-nav__link mobile-menu-nav__link_active-page"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="mobile-menu-nav__item">
+                  <a href="" class="mobile-menu-nav__link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="mobile-menu-contacts">
+              <li class="mobile-menu-contacts__item">
+                <a
+                  href="tel:+380961111111"
+                  class="mobile-menu-contacts__link mobile-menu-contacts__link_accent"
+                >
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu-contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu-contacts__link"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu-socials">
+              <li class="mobile-menu-socials__item">
+                <a href="#" class="mobile-menu-socials__link"
+                  ><span lang="en">Instagram</span></a
+                >
+              </li>
+              <li class="mobile-menu-socials__item">
+                <a href="#" class="mobile-menu-socials__link"
+                  ><span lang="en">Twitter</span></a
+                >
+              </li>
+              <li class="mobile-menu-socials__item">
+                <a href="#" class="mobile-menu-socials__link"
+                  ><span lang="en">Facebook</span></a
+                >
+              </li>
+              <li class="mobile-menu-socials__item">
+                <a href="#" class="mobile-menu-socials__link"
+                  ><span lang="en">LinkedIn</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -91,12 +172,59 @@
             <li class="projects__item">
               <a href="#" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/img-work-example-1.jpg"
-                    alt="Веб-сайт Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-1.webp    1x,
+                        ./images/work-examples/img-example-desktop-1@2x.webp 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-1.jpg    1x,
+                        ./images/work-examples/img-example-desktop-1@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-1.webp    1x,
+                        ./images/work-examples/img-example-tablet-1@2x.webp 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-1.jpg    1x,
+                        ./images/work-examples/img-example-tablet-1@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-1.webp    1x,
+                        ./images/work-examples/img-example-1@2x.webp 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-1.jpg    1x,
+                        ./images/work-examples/img-example-1@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/work-examples/img-example-1.jpg"
+                      alt="веб-сайт Технокряк"
+                    />
+                  </picture>
                   <p class="projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -112,12 +240,59 @@
             <li class="projects__item">
               <a href="#" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/img-work-example-2.jpg"
-                    alt="Дизайн постера Нью Орлеан проти Голден Стар"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-2.webp    1x,
+                        ./images/work-examples/img-example-desktop-2@2x.webp 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-2.jpg    1x,
+                        ./images/work-examples/img-example-desktop-2@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-2.webp    1x,
+                        ./images/work-examples/img-example-tablet-2@2x.webp 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-2.jpg    1x,
+                        ./images/work-examples/img-example-tablet-2@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-2.webp    1x,
+                        ./images/work-examples/img-example-2@2x.webp 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-2.jpg    1x,
+                        ./images/work-examples/img-example-2@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/work-examples/img-example-2.jpg"
+                      alt="дизайн постеру Н'ю Орлеан проти Голден Стар"
+                    />
+                  </picture>
                   <p class="projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -135,12 +310,59 @@
             <li class="projects__item">
               <a href="#" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/img-work-example-3.jpg"
-                    alt="Проєкт ресторану Сіафуд"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-3.webp    1x,
+                        ./images/work-examples/img-example-desktop-3@2x.webp 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-3.jpg    1x,
+                        ./images/work-examples/img-example-desktop-3@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-3.webp    1x,
+                        ./images/work-examples/img-example-tablet-3@2x.webp 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-3.jpg    1x,
+                        ./images/work-examples/img-example-tablet-3@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-3.webp    1x,
+                        ./images/work-examples/img-example-3@2x.webp 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-3.jpg    1x,
+                        ./images/work-examples/img-example-3@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/work-examples/img-example-3.jpg"
+                      alt="додаток ресторану Сіфуд"
+                    />
+                  </picture>
                   <p class="projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -158,12 +380,59 @@
             <li class="projects__item">
               <a href="#" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/img-work-example-4.jpg"
-                    alt="маркетинг проєкт Прайм"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-4.webp    1x,
+                        ./images/work-examples/img-example-desktop-4@2x.webp 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-4.jpg    1x,
+                        ./images/work-examples/img-example-desktop-4@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-4.webp    1x,
+                        ./images/work-examples/img-example-tablet-4@2x.webp 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-4.jpg    1x,
+                        ./images/work-examples/img-example-tablet-4@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-4.webp    1x,
+                        ./images/work-examples/img-example-4@2x.webp 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-4.jpg    1x,
+                        ./images/work-examples/img-example-4@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/work-examples/img-example-4.jpg"
+                      alt="маркетинг проєкт Прайм"
+                    />
+                  </picture>
                   <p class="projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -181,12 +450,59 @@
             <li class="projects__item">
               <a href="#" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/img-work-example-5.jpg"
-                    alt="додаток проєкту Боксес"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-5.webp    1x,
+                        ./images/work-examples/img-example-desktop-5@2x.webp 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-5.jpg    1x,
+                        ./images/work-examples/img-example-desktop-5@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-5.webp    1x,
+                        ./images/work-examples/img-example-tablet-5@2x.webp 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-5.jpg    1x,
+                        ./images/work-examples/img-example-tablet-5@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-5.webp    1x,
+                        ./images/work-examples/img-example-5@2x.webp 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-5.jpg    1x,
+                        ./images/work-examples/img-example-5@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/work-examples/img-example-5.jpg"
+                      alt="додаток проєкт Боксес"
+                    />
+                  </picture>
                   <p class="projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -204,12 +520,59 @@
             <li class="projects__item">
               <a href="#" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/img-work-example-6.jpg"
-                    alt="веб-сайт Інспірейшн хес ноу бордерс"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-6.webp    1x,
+                        ./images/work-examples/img-example-desktop-6@2x.webp 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-6.jpg    1x,
+                        ./images/work-examples/img-example-desktop-6@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-6.webp    1x,
+                        ./images/work-examples/img-example-tablet-6@2x.webp 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-6.jpg    1x,
+                        ./images/work-examples/img-example-tablet-6@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-6.webp    1x,
+                        ./images/work-examples/img-example-6@2x.webp 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-6.jpg    1x,
+                        ./images/work-examples/img-example-6@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/work-examples/img-example-6.jpg"
+                      alt="веб-сайт Інспірейшн хез но бордерс"
+                    />
+                  </picture>
                   <p class="projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -227,12 +590,59 @@
             <li class="projects__item">
               <a href="#" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/img-work-example-7.jpg"
-                    alt="дизайн видання Лімітед Едішн"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-7.webp    1x,
+                        ./images/work-examples/img-example-desktop-7@2x.webp 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-7.jpg    1x,
+                        ./images/work-examples/img-example-desktop-7@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-7.webp    1x,
+                        ./images/work-examples/img-example-tablet-7@2x.webp 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-7.jpg    1x,
+                        ./images/work-examples/img-example-tablet-7@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-7.webp    1x,
+                        ./images/work-examples/img-example-7@2x.webp 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-7.jpg    1x,
+                        ./images/work-examples/img-example-7@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/work-examples/img-example-7.jpg"
+                      alt="дизайн видання Лімітед Едішн"
+                    />
+                  </picture>
                   <p class="projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -250,12 +660,59 @@
             <li class="projects__item">
               <a href="#" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/img-work-example-8.jpg"
-                    alt="маркетинг проєкт ЛАБ"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-8.webp    1x,
+                        ./images/work-examples/img-example-desktop-8@2x.webp 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-8.jpg    1x,
+                        ./images/work-examples/img-example-desktop-8@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-8.webp    1x,
+                        ./images/work-examples/img-example-tablet-8@2x.webp 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-8.jpg    1x,
+                        ./images/work-examples/img-example-tablet-8@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-8.webp    1x,
+                        ./images/work-examples/img-example-8@2x.webp 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-8.jpg    1x,
+                        ./images/work-examples/img-example-8@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/work-examples/img-example-8.jpg"
+                      alt="маркетинг-проєкт ЛАБ"
+                    />
+                  </picture>
                   <p class="projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -273,12 +730,59 @@
             <li class="projects__item">
               <a href="#" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/img-work-example-9.jpg"
-                    alt="додаток Гроуінг бізнес"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-9.webp    1x,
+                        ./images/work-examples/img-example-desktop-9@2x.webp 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-desktop-9.jpg    1x,
+                        ./images/work-examples/img-example-desktop-9@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-9.webp    1x,
+                        ./images/work-examples/img-example-tablet-9@2x.webp 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-tablet-9.jpg    1x,
+                        ./images/work-examples/img-example-tablet-9@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-9.webp    1x,
+                        ./images/work-examples/img-example-9@2x.webp 2x
+                      "
+                      media="(max-width:767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/work-examples/img-example-9.jpg    1x,
+                        ./images/work-examples/img-example-9@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/work-examples/img-example-9.jpg"
+                      alt="додаток Гроуінг Бізнес"
+                    />
+                  </picture>
                   <p class="projects__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -297,84 +801,86 @@
     </main>
     <footer id="footer-contacts" class="footer">
       <div class="container footer__container">
-        <div class="footer__address">
-          <a href="./index.html" lang="en" class="logo footer__logo">
-            Web<span class="footer__logo_dark">Studio</span>
-          </a>
+        <div class="footer__container_flex">
+          <div class="footer__address">
+            <a href="./index.html" lang="en" class="logo footer__logo">
+              Web<span class="footer__logo_dark">Studio</span>
+            </a>
 
-          <address class="address">
-            <ul class="address-list">
-              <li class="address-list__item">
+            <address class="address">
+              <ul class="address-list">
+                <li class="address-list__item">
+                  <a
+                    href="https://goo.gl/maps/cRMagZyy7CcEZu3e9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="address-list__link"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address-list__item">
+                  <a href="mailto:info@devstudio.com" class="address-list__link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address-list__item">
+                  <a href="tel:+380961111111" class="address-list__link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer__socials">
+            <b class="footer__socials_text">Приєднуйтесь</b>
+            <ul class="socials">
+              <li class="socials__item">
                 <a
-                  href="https://goo.gl/maps/cRMagZyy7CcEZu3e9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="address-list__link"
-                  >м. Київ, пр-т Лесі Українки, 26</a
+                  href="#"
+                  aria-label="instagram"
+                  class="socials__link socials__link_other-bgc-color"
                 >
+                  <svg width="20" height="20" class="socials__icon">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-list__item">
-                <a href="mailto:info@devstudio.com" class="address-list__link"
-                  >info@devstudio.com</a
+              <li class="socials__item">
+                <a
+                  href="#"
+                  aria-label="twitter"
+                  class="socials__link socials__link_other-bgc-color"
                 >
+                  <svg width="20" height="20" class="socials__icon">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-list__item">
-                <a href="tel:+380961111111" class="address-list__link"
-                  >+38 096 111 11 11</a
+              <li class="socials__item">
+                <a
+                  href="#"
+                  aria-label="facebook"
+                  class="socials__link socials__link_other-bgc-color"
                 >
+                  <svg width="20" height="20" class="socials__icon">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a
+                  href="#"
+                  aria-label="linkedin"
+                  class="socials__link socials__link_other-bgc-color"
+                >
+                  <svg width="20" height="20" class="socials__icon">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="footer__socials">
-          <b class="footer__socials_text">Приєднуйтесь</b>
-          <ul class="socials">
-            <li class="socials__item">
-              <a
-                href="#"
-                aria-label="instagram"
-                class="socials__link socials__link_other-bgc-color"
-              >
-                <svg width="20" height="20" class="socials__icon">
-                  <use href="./images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                href="#"
-                aria-label="twitter"
-                class="socials__link socials__link_other-bgc-color"
-              >
-                <svg width="20" height="20" class="socials__icon">
-                  <use href="./images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                href="#"
-                aria-label="facebook"
-                class="socials__link socials__link_other-bgc-color"
-              >
-                <svg width="20" height="20" class="socials__icon">
-                  <use href="./images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                href="#"
-                aria-label="linkedin"
-                class="socials__link socials__link_other-bgc-color"
-              >
-                <svg width="20" height="20" class="socials__icon">
-                  <use href="./images/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <form
@@ -393,11 +899,12 @@
           <button type="submit" class="button contact-form__button">
             <span class="button__text_right">Підписатися</span>
             <svg width="24" height="24" class="button__icon">
-              <use href="./images/sprite.svg#icon-icon-send"></use>
+              <use href="./images/sprite.svg#icon-send"></use>
             </svg>
           </button>
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

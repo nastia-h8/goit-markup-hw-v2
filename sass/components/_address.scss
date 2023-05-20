@@ -1,3 +1,9 @@
+.address-list{
+    @media screen and (max-width:767px) {
+            margin-bottom: 60px;
+        }
+}
+
 .address-list__item:not(:last-child) {
     margin-bottom: 9px;
 }
